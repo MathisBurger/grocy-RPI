@@ -1,4 +1,6 @@
 FROM ubuntu
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Etc/UTC
 
 WORKDIR /var/www/html
 RUN apt update
