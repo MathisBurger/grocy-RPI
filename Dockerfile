@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM balenalib/raspberry-pi-debian:latest
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Etc/UTC
 
