@@ -1,4 +1,4 @@
-FROM armv7/armhf-ubuntu
+FROM ubuntu
 
 WORKDIR /var/www/html
 RUN apt update
