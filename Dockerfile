@@ -19,6 +19,7 @@ COPY config-dist.php config-dist.php
 COPY config-dist.php data/config.php
 RUN chown -R www-data:www-data /var/www/html
 COPY config.conf /etc/apache2/sites-enabled/000-default.conf
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 EXPOSE 80
 
