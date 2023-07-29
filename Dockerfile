@@ -20,7 +20,7 @@ COPY config-dist.php data/config.php
 RUN chown -R www-data:www-data /var/www/html
 COPY config.conf /etc/apache2/sites-enabled/000-default.conf
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
-
+RUN apt install –y apache2-utils 
+RUN apt clean 
 EXPOSE 80
-
-ENTRYPOINT service apache2 restart
+CMD [“apache2ctl”, “-D”, “FOREGROUND”]
