@@ -2,6 +2,7 @@ FROM ubuntu
 
 WORKDIR /var/www/html
 RUN apt update
+RUn apt install wget
 RUN apt install apache2 -y
 RUN wget -qO /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 RUN echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
