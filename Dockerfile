@@ -12,7 +12,8 @@ RUN apt update -y
 RUN apt install apache2 -y
 RUN apt install unzip
 RUN apt-get upgrade -y
-RUN apt install -y php8.1-common php8.1-cli php8.1-xml php8.1-curl php8.1-zip php8.1-gd php8.1-fileinfo php8.1-intl php8.1-mbstring
+RUN apt install -y php8.1-common php8.1-cli php8.1-xml php8.1-curl php8.1-zip php8.1-gd
+RUN apt install -y php8.1-fileinfo php8.1-intl php8.1-mbstring
 RUN apt-get install php8.1-sqlite -y
 RUN apt install -y libapache2-mod-php8.1
 RUN wget https://github.com/grocy/grocy/releases/download/v4.0.0/grocy_4.0.0.zip
