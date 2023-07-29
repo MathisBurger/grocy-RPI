@@ -3,10 +3,11 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Etc/UTC
 
 WORKDIR /var/www/html
-RUN apt update
+RUN apt update -y
 RUN apt install wget -y
 RUN apt install lsb-release ca-certificates apt-transport-https software-properties-common -y
-RUN add-apt-repository ppa:ondrej/php
+RUN wget -qO /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+RUN echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php.list
 RUN apt update -y
 RUN apt install apache2 -y
 RUN apt install unzip
