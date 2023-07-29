@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian
+FROM armv7/armhf-ubuntu
 
 WORKDIR /var/www/html
 RUN apt update
