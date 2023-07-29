@@ -1,6 +1,7 @@
 FROM resin/rpi-raspbian
 
 WORKDIR /var/www/html
+RUN apt update
 RUN apt install apache2 -y
 RUN wget -qO /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 RUN echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
