@@ -9,6 +9,7 @@ RUN apt install lsb-release ca-certificates apt-transport-https software-propert
 RUN add-apt-repository ppa:ondrej/php
 RUN apt update -y
 RUN apt install apache2 -y
+RUN apt install unzip
 RUN apt install -y php8.1-common php8.1-cli php8.1-xml php8.1-curl php8.1-zip php8.1-gd php8.1-fileinfo php8.1-intl php8.1-mbstring
 RUN apt-get install php8.1-sqlite -y
 RUN apt install -y libapache2-mod-php8.1
