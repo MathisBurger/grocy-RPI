@@ -1,4 +1,4 @@
-FROM awalach/raspbian-lite
+FROM resin/rpi-raspbian
 
 WORKDIR /var/www/html
 RUN apt install apache2 -y
