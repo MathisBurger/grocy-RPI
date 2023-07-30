@@ -23,3 +23,4 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 RUN apt install apache2-utils -y
 RUN apt clean 
 EXPOSE 80
+CMD ["sleep", "infinity"]
