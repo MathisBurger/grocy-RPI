@@ -20,7 +20,5 @@ COPY config-dist.php data/config.php
 RUN chown -R www-data:www-data /var/www/html
 COPY config.conf /etc/apache2/sites-enabled/000-default.conf
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
-RUN apt install apache2-utils -y
-RUN apt clean 
 EXPOSE 80
-CMD ["sleep", "infinity"]
+CMD service apache2 start && sleep infinity
